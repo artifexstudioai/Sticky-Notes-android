@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sticky Notes</string>
+    <string name="widget_name">Sticky Note</string>
+    <string name="widget_description">Display a colorful sticky note on your home screen</string>
+    <string name="widget_choose_note">Choose Note for Widget</string>
+    <string name="widget_no_note">Tap to select or create a sticky note</string>
+    <string name="widget_pinned_toast">Sticky Note pinned to Home Screen!</string>
+</resources>

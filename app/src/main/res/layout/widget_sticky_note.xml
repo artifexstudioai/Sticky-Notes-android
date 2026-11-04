@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Card -->
+    <ImageView
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_bg_yellow" />
+
+    <!-- Content Layout -->
+    <RelativeLayout
+        android:id="@+id/widget_inner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <!-- Top Tape Strip Decor -->
+        <ImageView
+            android:id="@+id/widget_tape"
+            android:layout_width="54dp"
+            android:layout_height="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@drawable/widget_tape" />
+
+        <!-- Top Header Row -->
+        <RelativeLayout
+            android:id="@+id/widget_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/widget_tape"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:id="@+id/widget_pin_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_widget_pin" />
+
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/widget_edit_btn"
+                android:layout_toEndOf="@id/widget_pin_icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sticky Note"
+                android:textColor="#1F2937"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/widget_edit_btn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_widget_edit" />
+        </RelativeLayout>
+
+        <!-- Note Content / Checklist Preview -->
+        <TextView
+            android:id="@+id/widget_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/widget_footer"
+            android:layout_below="@id/widget_header"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:text="Tap to write a sticky note or select one from the app."
+            android:textColor="#374151"
+            android:textSize="13sp" />
+
+        <!-- Footer with Timestamp -->
+        <LinearLayout
+            android:id="@+id/widget_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/widget_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Just now"
+                android:textColor="#6B7280"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/widget_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sticky Note"
+                android:textColor="#9CA3AF"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

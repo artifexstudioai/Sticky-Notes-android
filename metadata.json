@@ -1,0 +1,6 @@
+{
+  "name": "Sticky Notes",
+  "description": "Sticky Notes app with customizable colors, checklist tasks, and interactive home screen widgets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
