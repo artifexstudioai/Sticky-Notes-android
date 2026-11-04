@@ -22,6 +22,7 @@ jobs:
           fi
           mkdir -p /tmp/sticky-project
           unzip -q "$ZIP_FILE" -d /tmp/sticky-project
+          rm -rf /tmp/sticky-project/.github
           cp -a /tmp/sticky-project/. .
           rm "$ZIP_FILE"
 
